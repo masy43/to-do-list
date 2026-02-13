@@ -1,101 +1,130 @@
-# Organize Your Day - To-Do List Application
+<div align="center">
 
-A modern, feature-rich to-do list application built with vanilla HTML, CSS, and JavaScript. Manage your daily tasks efficiently with an intuitive interface and persistent storage.
+# 🔴 TaskFlow
+
+### A cinematic task manager with a red & black aesthetic
+
+Built with pure HTML, CSS & JavaScript — no frameworks, no dependencies.
+
+<br>
+
+<img src="assets/images/preview.svg" alt="TaskFlow Preview" width="100%">
+
+<br>
+
+**[Live Demo](#getting-started)** · **[Features](#features)** · **[Keyboard Shortcuts](#keyboard-shortcuts)**
+
+---
+
+</div>
+
+## Preview
+
+> A sleek, sidebar-navigated task manager with priorities, due dates, categories, subtasks, and dark/light themes — all wrapped in a striking red & black cinematic design.
 
 ## Features
 
-- **Add Tasks**: Quickly add new tasks with an input field and button
-- **Mark Complete**: Check off tasks as you complete them with a visual indicator
-- **Delete Tasks**: Remove tasks you no longer need
-- **Progress Tracking**: View your completion progress with a visual progress bar
-- **Task Filtering**: Filter tasks by status - All, Active, or Completed
-- **Mark All Done**: Complete all tasks at once with a single click
-- **Persistent Storage**: Tasks are automatically saved to localStorage and restored on page reload
-- **Responsive Design**: Works seamlessly on desktop and mobile devices
-- **Dark Theme**: Modern dark interface with accent colors for better visibility
+### Core Task Management
+
+| Feature               | Description                                                                              |
+| --------------------- | ---------------------------------------------------------------------------------------- |
+| **Create & Edit**     | Full modal form with title, description, priority, due date/time, category, and subtasks |
+| **Priority Levels**   | None · Low · Medium · High · Urgent — color-coded tags on each task                      |
+| **Due Dates & Times** | Set deadlines with smart labels: _Today_, _Tomorrow_, _Overdue_                          |
+| **Subtasks**          | Break tasks into steps; parent auto-completes when all subtasks are done                 |
+| **Categories**        | Create custom categories with color picker; filter tasks by category                     |
+| **Duplicate Tasks**   | One-click task duplication for recurring work                                            |
+
+### Smart Views
+
+| View          | What it shows                      |
+| ------------- | ---------------------------------- |
+| **All Tasks** | Everything in one place            |
+| **Today**     | Tasks due today                    |
+| **Upcoming**  | Future tasks                       |
+| **Completed** | Finished tasks                     |
+| **Overdue**   | Past-due tasks (red badge warning) |
+| **Category**  | Filter by any custom category      |
+
+### UI & Experience
+
+- 🎨 **Dark / Light theme** toggle with red & black cinematic design
+- 📊 **Stats strip** — total, done, pending, overdue at a glance
+- 📈 **Animated progress bar** with glowing red gradient
+- 🔍 **Real-time search** across task titles and descriptions
+- 🔃 **Sorting** — by date created, due date, priority, or alphabetical
+- 📦 **Export to JSON** — download all tasks and categories
+- 💾 **Persistent storage** — everything saved to `localStorage`
+- 📱 **Fully responsive** — sidebar collapses on mobile with overlay
+- ✨ **Smooth animations** — task cards, modals, toasts, FAB rotation
+- 🔔 **Toast notifications** — success, error, and info feedback
+
+## Keyboard Shortcuts
+
+| Shortcut   | Action                    |
+| ---------- | ------------------------- |
+| `Ctrl + N` | Create new task           |
+| `Ctrl + K` | Focus search bar          |
+| `Escape`   | Close any open modal      |
+| `Enter`    | Submit task / add subtask |
+
+## Getting Started
+
+```bash
+# Clone the repository
+git clone https://github.com/masy43/to-do-list.git
+
+# Open in browser
+cd to-do-list
+start index.html        # Windows
+open index.html         # macOS
+xdg-open index.html     # Linux
+```
+
+No build tools, no `npm install`, no server required — just open the HTML file.
 
 ## Project Structure
 
 ```
-├── index.html       # HTML structure
-├── style.css        # Styling and layout
-├── script.js        # Application logic
-└── README.md        # Documentation
+to-do-list/
+├── index.html                # App entry point
+├── src/
+│   ├── css/
+│   │   └── style.css         # Red & black themed CSS with dark/light modes
+│   └── js/
+│       └── app.js            # Full application logic (state, CRUD, rendering)
+├── assets/
+│   └── images/
+│       ├── preview.svg       # App preview mockup
+│       └── Mockup.png        # Design mockup
+├── .gitignore                # Git ignore rules
+├── LICENSE                   # MIT License
+└── README.md                 # This file
 ```
 
-## How to Use
+## Tech Stack
 
-1. **Open the Application**: Open `index.html` in your web browser
-2. **Add a Task**: Type your task in the input field and click "Add Task" or press Enter
-3. **Complete a Task**: Click the circle button next to a task to mark it as complete
-4. **Delete a Task**: Click the trash icon to remove a task
-5. **Filter Tasks**: Use the filter tabs (All, Active, Completed) to view specific tasks
-6. **Mark All Done**: Click "Mark All Done" to complete all tasks at once
-
-## Features in Detail
-
-### Task Management
-
-- Each task displays with a completion checkbox, task text, and delete button
-- Completed tasks show with a strikethrough text style
-- Tasks are organized in a grid layout with clear column headers
-
-### Progress Tracking
-
-- Real-time progress bar showing completion percentage
-- Task counter displaying completed vs. total tasks
-- Visual feedback for task completion status
-
-### Storage
-
-- All tasks are automatically saved to browser's localStorage
-- Tasks persist across browser sessions
-- Sample tasks are pre-loaded on first use
-
-## Technical Details
-
-### Technology Stack
-
-- **HTML5**: Semantic markup
-- **CSS3**: Flexbox and Grid layout, animations, gradients
-- **JavaScript (ES6+)**: DOM manipulation, event handling, localStorage API
-
-### Key Functions
-
-- `init()`: Initialize the application
-- `renderTasks()`: Display tasks based on current filter
-- `updateProgress()`: Update progress bar and counters
-- `setupEventListeners()`: Attach event handlers
-- `addTask()`: Create and add new task
-- `toggleComplete()`: Mark task as complete/incomplete
-- `deleteTask()`: Remove a task
-- `markAllDone()`: Complete all tasks
-- `saveTasks()`: Persist tasks to localStorage
-
-## Browser Compatibility
-
-Works on all modern browsers that support:
-
-- ES6 JavaScript
-- CSS Grid and Flexbox
-- localStorage API
+| Technology       | Usage                                                            |
+| ---------------- | ---------------------------------------------------------------- |
+| **HTML5**        | Semantic structure, accessible forms, SVG icons                  |
+| **CSS3**         | Custom properties, flexbox, grid, animations, `backdrop-filter`  |
+| **Vanilla JS**   | State management, DOM rendering, `localStorage`, keyboard events |
+| **Google Fonts** | Inter typeface (300–800 weights)                                 |
 
 ## Customization
 
-You can customize the application by:
+The entire color scheme is driven by CSS custom properties. To change the theme:
 
-- Modifying colors in the CSS `:root` variables
-- Adjusting layout in the grid template columns
-- Changing animation speeds in the CSS keyframes
-- Adding new filter options through JavaScript
+```css
+[data-theme="dark"] {
+  --accent: #e63946; /* Primary red */
+  --accent-hover: #ff4d5a; /* Hover red */
+  --accent-deep: #b91c2c; /* Deep red */
+  --bg-primary: #050505; /* Background */
+  --bg-card: #0e0e0e; /* Card surfaces */
+}
+```
 
-## Future Enhancements
+## License
 
-Potential improvements for future versions:
-
-- Task priority levels
-- Due dates and reminders
-- Task categories/tags
-- Export/import functionality
-- Dark/light theme toggle
-- Multi-user support
+MIT — free for personal and commercial use.
